@@ -30,9 +30,8 @@ const Education = () => {
           </p>
 
           <ul className="mt-3 text-sm text-gray-600 dark:text-white/80 list-disc list-inside space-y-1">
-            <li>Focused on software development and IT support</li>
+            <li>Focused on software development</li>
             <li>Studied algorithms, data structures, and system design</li>
-            <li>Developed projects including a 2D game engine and automation workflows</li>
           </ul>
 
         </div>
