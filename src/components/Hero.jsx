@@ -1,26 +1,58 @@
-import { devData, appLogo } from "../assets/assets"
-import { motion } from 'motion/react';
+import { devData } from "../assets/assets"
+import { motion } from "motion/react"
 
-const Hero = ( {theme} ) => {
-    return (
-            <div className="flex justify-between py-8">
-                <div className="flex justify-end pl-100">
-                    <img src={devData.guintu} className="h-100 w-100"/>
-                </div>
-                <div className="flex justify-start py-8 pr-80">
-                    <div className='flex flex-col h-12px justify-center items-center gap-6 text-center text-gray-700'>
-                        <img src={theme === 'dark'? appLogo.logo_dark : appLogo.logo} className="w-32 sm:w-40" alt="logo"/>
+const Hero = () => {
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-between py-8 px-4 md:px-12 gap-8">
 
-                        <motion.h1 initial={{opacity: 0, y: 40}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.6, delay: 0.8}} viewport={{once: true}}
-                        className="text-4x1 sm:text-5xl md:text-6x1 x1:text-[84px] font-medium x1:leading-[95px] max-w-5x1 dark:text-white"> Hello, my name is <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Julian Mathew M. Guintu</span>!</motion.h1>
+      {/* Image */}
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <motion.img
+          src={devData.guintu}
+          className="w-full max-w-[220px] sm:max-w-[260px] md:max-w-[300px]"          
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+        />
+      </div>
 
-                        <motion.p initial={{opacity: 0, y: 30}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.5, delay: 1}} viewport={{once: true}}
-                        className="text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5">Aspiring Software Developer, specifically in Quality Assurance Manual/Automation Testing. Currently a 4th year Computer Science student at Holy Angel University. </motion.p>
-                    </div>
-                </div>
-            </div>
+      {/* Text */}
+      <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+        <div className="flex flex-col items-center md:items-start gap-6 text-center md:text-left">
 
-    )
+          <motion.h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium max-w-xl dark:text-white"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Hello, my name is{" "}
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Julian Mathew M. Guintu
+            </span>
+            !
+          </motion.h1>
+
+          <motion.p
+            className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-white/75 max-w-md"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
+            Fourth-year Computer Science student at Holy Angel University with a
+            background in IT Support and a growing focus on software testing and
+            quality assurance. I am actively developing skills in both manual
+            and automation testing, along with workflow automation using n8n.
+          </motion.p>
+
+        </div>
+      </div>
+
+    </div>
+  )
 }
 
 export default Hero

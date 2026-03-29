@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { appLogo, icons, devData } from '../assets/assets'
+import { appLogo, icons } from '../assets/assets'
 import ThemeToggleBtn from './ThemeToggleBtn'
 import { motion } from 'motion/react'
 
@@ -18,6 +18,8 @@ const Navbar = ({ theme, setTheme }) => {
         <img src={icons.close_icon} alt="close" className="w-5 absolute right-4 top-4 sm:hidden cursor-pointer" onClick={() => setSidebarOpen(false)}/>
 
         <a onClick={()=>setSidebarOpen(false)} href="#" className="sm:hover:border-b">About</a>
+        <a onClick={()=>setSidebarOpen(false)} href="#experiences" className="sm:hover:border-b">Experiences</a>
+        <a onClick={()=>setSidebarOpen(false)} href="#education" className="sm:hover:border-b">Education</a>
         <a onClick={()=>setSidebarOpen(false)} href="#projects" className="sm:hover:border-b">Projects</a>
         <a onClick={()=>setSidebarOpen(false)} href="#certifications" className="sm:hover:border-b">Certifications</a>
         <a onClick={()=>setSidebarOpen(false)} href="#skills" className="sm:hover:border-b">Skills</a>
@@ -25,7 +27,7 @@ const Navbar = ({ theme, setTheme }) => {
 
         <div className="sm:hidden mt-3 relative">
           <div className="flex items-center">
-            <a href={devData.resume} className="text-sm flex items-center gap-2 bg-white text-primary font-semibold px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all" download>Resume</a>
+            <a href="https://drive.google.com/file/d/1CsrAEK4kHkXdgx_tZ6mfH_mbUL9_vSRM/view?usp=sharing" target="_blank" className="text-sm flex items-center gap-2 bg-white text-primary font-semibold px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all" download>View Resume</a>
           </div>
         </div>
       </div>
@@ -35,7 +37,7 @@ const Navbar = ({ theme, setTheme }) => {
         <img src={theme === 'dark' ? icons.menu_icon_dark : icons.menu_icon} alt="menu" onClick={() => setSidebarOpen(true)} className="w-8 sm:hidden cursor-pointer"/>
 
         <div className="hidden sm:flex items-center relative">
-          <a href="https://drive.google.com/file/d/1Ae70oEIK5M1fpF_T38phJAOAqAwPyajj/view?usp=sharing" target="_blank" className="text-sm flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all" download>Resume</a>
+          <a href="https://drive.google.com/file/d/1CsrAEK4kHkXdgx_tZ6mfH_mbUL9_vSRM/view?usp=sharing" target="_blank" className="text-sm flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all" download>View Resume</a>
         </div>
       </div>
     </motion.div>
