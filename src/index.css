@@ -9,6 +9,10 @@
   font-weight: 500;
 }
 
+body {
+  @apply bg-white dark:bg-[#0a0a0a];
+}
+
 @theme {
   --color-primary: #a9dce3;
   --color-secondary: #7698de;

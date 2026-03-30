@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import Navbar from "./components/Navbar"
+import Background from "./components/Background"
 import Hero from "./components/Hero"
 import Experiences from "./components/Experiences"
 import Education from "./components/Education"
@@ -15,7 +16,8 @@ const App = () => {
   return (
     <div className="dark:bg-black relative">
       <Navbar theme={theme} setTheme={setTheme}/>
-      <Hero theme={theme} setTheme={setTheme}/>
+      <Background theme={theme} setTheme={setTheme}/>
+      <Hero/>
       <Experiences/>
       <Education/>
       <Projects/>
