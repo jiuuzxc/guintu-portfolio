@@ -27,7 +27,7 @@ const Navbar = ({ theme, setTheme }) => {
 
         <div className="sm:hidden mt-3 relative">
           <div className="flex items-center">
-            <a href="https://drive.google.com/file/d/1dQyqsAnsWprM4A4LTYmZmICWOjkVlp2o/view?usp=drive_link" target="_blank" className="text-sm flex items-center gap-2 bg-white text-primary font-semibold px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all" download>View Resume</a>
+            <a href="https://drive.google.com/file/d/1dQyqsAnsWprM4A4LTYmZmICWOjkVlp2o/view?usp=sharing" target="_blank" className="text-sm flex items-center gap-2 bg-white text-primary font-semibold px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all" download>View Resume</a>
           </div>
         </div>
       </div>
